@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    
+    <title>Book List</title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+    * {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .success .error {
+     color: white;
+     padding: 5px;
+     margin: 5px 0 15px 0;   
+    }
+
+    .success {
+        background: green;
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .error {
+        background: red;
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    body {
+        background: #333333;
+        color: white;
+    }
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    #submit {
+        color: white;
+    }
+
+    .fas.fa-times {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        justify-content: center;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Add Book</h1>
+        <form id="book-form">
+        <div class="title">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="u-full-width">
+        </div>
+
+        <div class="author">
+            <label for="author">Author</label>
+            <input type="text" id="author" class="u-full-width">
+        </div>
+
+        <div class="ISBN">
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" class="u-full-width">
+        </div>
+        
+        <div>
+            <button type="submit" id="submit" class="u-full-width">Submit</button>
+        </div>
+
+    </form>
+
+
+        <table class="u-full-width">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>
+    
+    <script src="appes6.js"></script>
+</body>
+</html>
